@@ -9,7 +9,7 @@ class URLs:
     creating_order = f'{MAIN_PAGE_URL}api/v1/orders'
 
     # GET Orders - Получить заказ по его номеру
-    order_get_number = f'{MAIN_PAGE_URL}api/v1/orders/track'
+    order_get_number = f'{MAIN_PAGE_URL}api/v1/orders/track?t='
 
     # PUT Orders - Принять заказ
     order_accept = f'{MAIN_PAGE_URL}api/v1/orders/accept'
@@ -19,9 +19,6 @@ class URLs:
 
     # POST Courier - Создание курьера
     create_courier = f'{MAIN_PAGE_URL}api/v1/courier'
-
-    # PUT Courier - Получение заказа для курьера
-    get_courier = f'{MAIN_PAGE_URL}api/v1/orders/accept/329875?courierId='
 
     # POST Courier - Логин курьера в системе
     login_courier = f'{MAIN_PAGE_URL}api/v1/courier/login'
