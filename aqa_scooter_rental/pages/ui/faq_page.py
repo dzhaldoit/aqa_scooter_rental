@@ -1,39 +1,35 @@
 import allure
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
+from selene import browser, command
+from selene.core.query import text_content
 from data import URLs
-from tests.conftest import browser
 from aqa_scooter_rental.locators.ui_locators import FaqLocators
 
 
 class QuestionsPage:
     @allure.step("Открытие браузера")
-    def open_browser(self, browser):
-        browser.get(URLs.MAIN_PAGE_URL)
+    def open_browser(self):
+        browser.open(URLs.MAIN_PAGE_URL)
         return self
 
     @allure.step("Скролл к вопросам")
-    def scroll_to_faq(self, browser):
-        element = browser.find_element(By.CLASS_NAME, "accordion")
-        browser.execute_script("arguments[0].scrollIntoView(true);", element)
+    def scroll_to_faq(self):
+        browser.element('.accordion').perform(command.js.scroll_into_view)
         return self
 
     @allure.step("Извлечение вопроса")
-    def get_question(self, browser, index):
-        question_locator = (FaqLocators.QUESTION[0], FaqLocators.QUESTION[1].format(index))
-        question = WebDriverWait(browser, 3).until(ec.element_to_be_clickable(question_locator))
+    def get_question(self, index):
+        question_locator = FaqLocators.QUESTION[0].format(index)
+        question = browser.element(question_locator)
         question.click()
-        return question.text
+        return question.get(query=text_content)
 
     @allure.step("Извлечение ответа")
-    def get_answers(self, browser, index):
-        answers_locator = (FaqLocators.ANSWER[0], FaqLocators.ANSWER[1].format(index))
-        answers = browser.find_element(*answers_locator)
-        return answers.text
+    def get_answers(self, index):
+        answers_locator = FaqLocators.ANSWER[0].format(index)
+        answers = browser.element(answers_locator)
+        return answers.get(query=text_content)
 
 
 faq_page = QuestionsPage()
-
 
 

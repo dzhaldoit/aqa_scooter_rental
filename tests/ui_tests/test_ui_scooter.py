@@ -13,52 +13,50 @@ class TestOrderPage:
     @allure.description('Проверяем весь флоу позитивного сценария с двумя наборами данных')
     @pytest.mark.parametrize('button_method, data_order', [('click_first_button', OrderDataUi.FIRST_ORDER),
                                                            ('click_second_button', OrderDataUi.SECOND_ORDER)])
-    def test_make_an_order(self, browser, data_order, button_method):
+    def test_make_an_order(self, data_order, button_method):
         # Открытие браузера
-        order_page.open_browser(browser)
+        order_page.open_browser()
         # Клик по кнопке "Заказать" в шапке лендинга и в центре лендинга через параметр button_method
-        getattr(order_page, button_method)(browser)
+        getattr(order_page, button_method)()
         # Заполнение полей для заказа, через параметр data_order
-        order_page.user_rent_order(browser, **data_order)
+        order_page.user_rent_order(**data_order)
         # Проверка окна подтверждения по тексту "Заказ оформлен
-        order_page.confirmation_window(browser)
+        order_page.confirmation_window()
 
 
 class TestURL:
     @allure.title('Проверка URL Логотипа "Самокат"')
-    def test_main_page(self, browser):
+    def test_main_page(self):
         # Открытие браузера
-        logo_page.open_browser(browser)
+        logo_page.open_browser()
         # Клик по кнопке "Заказать" в шапке лендинга
-        logo_page.click_order_button(browser)
+        logo_page.click_order_button()
         # Клик по логотипу "Самокат"
-        logo_page.click_scooter_button(browser)
+        logo_page.click_scooter_button()
         # Проверка URL Логотипа "Самокат"
-        logo_page.should_main_page_url(browser)
+        logo_page.should_main_page_url()
 
     @allure.title('Проверка URL Логотипа "Яндекс"')
-    def test_dzen_url(self, browser):
+    def test_dzen_url(self):
         # Открытие браузера
-        logo_page.open_browser(browser)
+        logo_page.open_browser()
         # Клик по кнопке "Заказать" в шапке лендинга
-        logo_page.click_dzen_button(browser)
+        logo_page.click_dzen_button()
         # Переключение в новую вкладку
-        logo_page.switching_to_the_tab(browser)
-        # Ожидаем загрузки страницы Дзен
-        logo_page.wait_for_page_load(browser)
+        logo_page.switching_to_the_tab()
         # Проверка URL Логотипа "Самокат"
-        logo_page.should_dzen_url(browser)
+        logo_page.should_dzen_url()
 
 
 class TestMainPage:
     @allure.title('Проверка выпадающего списка в разделе "Вопросы о важном"')
     @allure.description('Проверяем, что по клику на стрелочку с вопросом, открывается соответсвующий ответ')
     @pytest.mark.parametrize('index, question, answer', QuestionsAndAnswers.QUESTIONS_AND_ANSWERS_LIST)
-    def test_check_question_and_answer(self, browser, index, question, answer):
-        faq_page.open_browser(browser)
-        faq_page.scroll_to_faq(browser)
-        question_text = faq_page.get_question(browser, index)
-        answer_text = faq_page.get_answers(browser, index)
+    def test_check_question_and_answer(self, index, question, answer):
+        faq_page.open_browser()
+        faq_page.scroll_to_faq()
+        question_text = faq_page.get_question(index)
+        answer_text = faq_page.get_answers(index)
         # Проверяем, что текст вопроса соответствует ожидаемому
         assert question_text == question
         # Проверяем, что текст ответа соответствует ожидаемому
