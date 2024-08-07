@@ -4,7 +4,7 @@ from selene.core.query import text_content
 from aqa_scooter_rental.locators.ui_locators import OrderLocators
 from data import URLs
 from selenium.webdriver.common.keys import Keys
-from tests.ui_tests.conftest import browser
+from tests.ui.conftest import browser
 
 
 class OrderPage:

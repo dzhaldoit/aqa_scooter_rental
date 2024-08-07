@@ -5,12 +5,11 @@ from selene import browser
 from allure_commons.types import AttachmentType
 
 
-def bstack_video(session_id):
+def bstack_video():
     bstack_session = requests.get(
-        f'https://api.browserstack.com/app-automate/sessions/{session_id}.json',
-        auth=(os.getenv('USER_NAME'), os.getenv('ACCESS_KEY'))
+        f'https://api.browserstack.com/app-automate/sessions/{browser.driver.session_id}.json',
+        auth=(os.getenv('USER_NAME'), os.getenv('ACCESS_KEY')),
     ).json()
-
     video_url = bstack_session['automation_session']['video_url']
 
     allure.attach(
@@ -20,7 +19,7 @@ def bstack_video(session_id):
         '</video>'
         '</body></html>',
         name='video recording',
-        attachment_type=allure.attachment_type.HTML
+        attachment_type=allure.attachment_type.HTML,
     )
 
 

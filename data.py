@@ -23,6 +23,9 @@ class URLs:
     # POST Courier - Логин курьера в системе
     login_courier = f'{MAIN_PAGE_URL}api/v1/courier/login'
 
+    # DELETE Courier - Удаление курьера
+    delete_courier = f'{MAIN_PAGE_URL}api/v1/courier/'
+
 
 class OrderData:
 
@@ -88,6 +91,7 @@ class OrderDataUi:
     }
 
 
+
 class QuestionsAndAnswers:
     # Блок Вопросы о важном на Главной странице
     QUESTIONS_AND_ANSWERS_LIST = [
@@ -112,3 +116,7 @@ class QuestionsAndAnswers:
         (8, 'Я жизу за МКАДом, привезёте?',
             'Да, обязательно. Всем самокатов! И Москве, и Московской области.')
     ]
+
+
+class IdCourier:
+    id_courier = "363538"
