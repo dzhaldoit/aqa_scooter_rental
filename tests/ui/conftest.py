@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from aqa_scooter_rental.utils import attach
 
 
-DEFAULT_BROWSER_VERSION = "123.0"
+DEFAULT_BROWSER_VERSION = "125.0"
 
 
 def pytest_addoption(parser):
