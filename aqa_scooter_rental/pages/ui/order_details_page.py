@@ -29,6 +29,7 @@ class OrderPage:
 
     @allure.step("Заполнение поля Имя")
     def user_name(self, name):
+        browser.element(*OrderLocators.TEXT_WINDOW).should(be.visible)
         browser.element(*OrderLocators.NAME).send_keys(name)
         return self
 
@@ -59,6 +60,7 @@ class OrderPage:
 
     @allure.step("Заполнение поля Дата доставки")
     def date_of_delivery(self, data):
+        browser.element(*OrderLocators.TEXT_RENT).should(be.visible)
         (browser.element(*OrderLocators.DATE_DELIVERY)
          .send_keys(data, Keys.ENTER))
         return self

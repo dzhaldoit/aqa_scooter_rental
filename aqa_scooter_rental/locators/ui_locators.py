@@ -11,6 +11,7 @@ class OrderLocators:
     ORDER_CENTER_BUTTON = ['(//button[text()="Заказать"])[2]']
 
     # Данные пользователя
+    TEXT_WINDOW = ['//div[text()="Для кого самокат"]']
     NAME = ["//input[@placeholder='* Имя']"]
     LAST_NAME = ["//input[@placeholder='* Фамилия']"]
     ADDRESS = ["//input[@placeholder='* Адрес: куда привезти заказ']"]
@@ -20,6 +21,7 @@ class OrderLocators:
     NEXT_BUTTON = [".//button[text()='Далее']"]
 
     # Окно Про аренду
+    TEXT_RENT = ['//div[text()="Про аренду"]']
     DATE_DELIVERY = ["//input[@placeholder='* Когда привезти самокат']"]
     RENT_TIME = ['//div[text()="* Срок аренды"]']
     SELECT_RENT_TIME = ['//div[text()="{}"]']
