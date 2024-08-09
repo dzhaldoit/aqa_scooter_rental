@@ -112,6 +112,11 @@ pytest tests --context==bstack
 ![This is an image](resources/fovorite_video_gif.gif)
 </details>
 
+<details><summary>Пример видео отчета о прохождении Mobile-теста</summary>
+  
+![This is an image](resources/mobile_video_gif.gif)
+</details>
+
 ### <img title="TestOps Report" src="resources/icons/TestOps.svg" height="40" width="40"/> Allure TestOps отчет тестов
 
 
