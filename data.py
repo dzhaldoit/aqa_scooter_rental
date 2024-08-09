@@ -70,7 +70,7 @@ class OrderDataUi:
         'name': 'Михаил',
         'last_name': 'Зубенко',
         'address': 'Мафиозникого 2',
-        'metro': 'ВДНХ',
+        'metro': 'Свиблово',
         'number': '+1234567890',
         'delivery_date': '04.07.2024',
         'rent_days': 'сутки',
