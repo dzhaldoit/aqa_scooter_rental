@@ -24,6 +24,7 @@ class TestOrderPage:
         order_page.confirmation_window()
 
 
+@allure.suite('URL логотипа')
 class TestURL:
     @allure.title('Проверка URL Логотипа "Самокат"')
     def test_main_page(self):
@@ -48,6 +49,7 @@ class TestURL:
         logo_page.should_dzen_url()
 
 
+@allure.suite('Вопросы в FAQ')
 class TestMainPage:
     @allure.title('Проверка выпадающего списка в разделе "Вопросы о важном"')
     @allure.description('Проверяем, что по клику на стрелочку с вопросом, открывается соответсвующий ответ')
