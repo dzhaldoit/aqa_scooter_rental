@@ -14,7 +14,7 @@
 Кикшеринг — краткосрочная аренда электросамокатов. Сервис прижился в России, и теперь почти в каждом городе, даже небольшом, можно взять электросамокат в аренду. Сезон кикшеринга начинается приблизительно с апреля и продолжается вплоть до ноября. В общем, пока позволяет погода и асфальтовое покрытие.
 
 ## Используемые инструменты в проекте
-<img title="Python" src="resources/icons/python.svg" height="30" width="30"/> <img title="Selene" src="resources/icons/selene.png" height="30" width="30"/>  <img title="Pytest" src="resources/icons/pytest.svg" height="40" width="40"/> <img title="Allure Report" src="resources/icons/allure-report.png" height="40" width="40"/> <img title="TestOps" src="resources/icons/TestOps.svg" height="30" width="30"/> <img title="Selenoid" src="resources/icons/selenoid.png" height="40" width="40"/> <img title="Jenkins" src="resources/icons/jenkins.svg" height="40" width="40"/> <img title="GitHub" src="resources/icons/github.svg" height="40" width="40"/> <img title="Pycharm" src="resources/icons/pycharm.png" height="40" width="40"/> <img title="Telegram" src="resources/icons/telegram.png" height="40" width="40"/> 
+<img title="Python" src="resources/icons/python.svg" height="40" width="40"/> <img title="Selene" src="resources/icons/selene.png" height="40" width="40"/>  <img title="Pytest" src="resources/icons/pytest.svg" height="40" width="40"/> <img title="Allure Report" src="resources/icons/allure-report.png" height="40" width="40"/> <img title="TestOps" src="resources/icons/TestOps.svg" height="40" width="40"/> <img title="Selenoid" src="resources/icons/selenoid.png" height="40" width="40"/> <img title="Jenkins" src="resources/icons/jenkins.svg" height="40" width="40"/> <img title="GitHub" src="resources/icons/github.svg" height="40" width="40"/> <img title="Pycharm" src="resources/icons/pycharm.png" height="40" width="40"/> <img title="Telegram" src="resources/icons/telegram.png" height="40" width="40"/> 
 ----
 ----
 <details>
@@ -122,21 +122,16 @@ pytest tests --context==bstack
 
 <details><summary>Общие результаты</summary>
   
-![This is an image](resources/allure-report-remote.png)
+![This is an image](resources/full.png)
 </details>
 
 <details><summary>Список тест кейсов</summary>
   
-![This is an image](resources/allure-report-local.png)
+![This is an image](resources/test-keys.png)
 </details>
 
-<details><summary>Пример Telegram отчета</summary>
+<details><summary>История запусков</summary>
   
-![This is an image](resources/telegram-notification.png)
-</details>
-
-<details><summary>Пример видео отчета о прохождении ui-теста</summary>
-  
-![This is an image](resources/fovorite_video_gif.gif)
+![This is an image](resources/launch-history.png)
 </details>
 
