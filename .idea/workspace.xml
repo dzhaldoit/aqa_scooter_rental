@@ -4,32 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd6e40d1-971d-4be5-9859-98b4f3ccb3bd" name="Changes" comment="test 0.3">
-      <change afterPath="$PROJECT_DIR$/.env.bstack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.local_emulator" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aqa_scooter_rental/utils/resource.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/mobile/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ui/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aqa_scooter_rental/locators/mobile_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqa_scooter_rental/locators/mobile_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aqa_scooter_rental/pages/mobile/couriers_pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqa_scooter_rental/pages/mobile/couriers_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aqa_scooter_rental/pages/ui/order_details_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqa_scooter_rental/pages/ui/order_details_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aqa_scooter_rental/utils/attach.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqa_scooter_rental/utils/attach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scooter_rental_v2.apk" beforeDir="false" afterPath="$PROJECT_DIR$/scooter-v2.0.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local_real" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/test_create_courier.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api/test_create_courier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/test_create_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api/test_create_order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/test_list_orders.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api/test_list_orders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/test_login_courier.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api/test_login_courier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/mobile_tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/mobile_tests/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/mobile_tests/test_mobile.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/mobile/test_mobile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ui_tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/mobile/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ui_tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ui/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ui_tests/test_ui_scooter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ui/test_ui_scooter.py" afterDir="false" />
+    <list default="true" id="cd6e40d1-971d-4be5-9859-98b4f3ccb3bd" name="Changes" comment="test 0.4">
+      <change afterPath="$PROJECT_DIR$/resources/allure-report-local.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/allure-report-remote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/fovorite_video_gif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/allure-report.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/jenkins.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/pycharm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/pytest.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/python.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/selene.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/selenium.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/selenoid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/telegram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/mobile_video_gif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/telegram-notification.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ui/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ui/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,17 +86,20 @@
     "Python tests.pytest for couriers_page.TestDeleteCourier.executor": "Run",
     "Python tests.pytest for test_mobile.TestMobile.test_api_take_order.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/djald/PycharmProjects/aqa_scooter_rental",
+    "last_opened_file_path": "C:/Users/djald/PycharmProjects/aqa_scooter_rental/resources",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental\resources" />
       <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental" />
       <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental\tests\api_tests" />
       <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental\tests\ui_tests" />
       <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental\tests\mobile_tests" />
-      <recent name="C:\Users\djald\PycharmProjects\aqa_scooter_rental\aqa_scooter_rental" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.pytest for couriers_page.TestApiReceivingOrderPages.test_order_take_successful">
@@ -248,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722931459611</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test 0.4">
+      <option name="closed" value="true" />
+      <created>1723056030725</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723056030725</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +271,7 @@
     <MESSAGE value="test 0.1" />
     <MESSAGE value="test 0.2" />
     <MESSAGE value="test 0.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 0.3" />
+    <MESSAGE value="test 0.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 0.4" />
   </component>
 </project>
