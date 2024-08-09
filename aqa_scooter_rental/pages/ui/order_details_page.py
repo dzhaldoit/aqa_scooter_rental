@@ -1,5 +1,5 @@
 import allure
-from selene import command
+from selene import command, be
 from selene.core.query import text_content
 from aqa_scooter_rental.locators.ui_locators import OrderLocators
 from data import URLs
@@ -45,7 +45,7 @@ class OrderPage:
     @allure.step("Заполнение поля Метро")
     def metro(self, metro):
         browser.element(*OrderLocators.METRO).send_keys(metro)
-        browser.element(*OrderLocators.LIST_STATION).click()
+        browser.element(*OrderLocators.LIST_STATION).should(be.visible).click()
         return self
 
     @allure.step("Заполнение поля Телефон")
