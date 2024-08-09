@@ -45,7 +45,8 @@ class OrderPage:
     @allure.step("Заполнение поля Метро")
     def metro(self, metro):
         browser.element(*OrderLocators.METRO).send_keys(metro)
-        browser.element(*OrderLocators.LIST_STATION).should(be.visible).click()
+        metro = browser.element(*OrderLocators.LIST_STATION).should(be.visible)
+        metro.click()
         return self
 
     @allure.step("Заполнение поля Телефон")
