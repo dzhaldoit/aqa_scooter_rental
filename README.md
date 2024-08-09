@@ -7,7 +7,7 @@
   </a>
 </p>
 <h1 align="center">
-  Scooter reantal
+  Scooter rental
 </h1>
 
 <p align="center">
