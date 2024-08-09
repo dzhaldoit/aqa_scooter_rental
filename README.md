@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://2gis.ru">
+  <a href="https://scooter-rental.ru/">
     <picture>
       <img alt="2gis" src="resources/logo.jpg" width="400" height="300">
     </picture>
