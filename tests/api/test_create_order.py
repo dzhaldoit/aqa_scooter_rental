@@ -1,11 +1,11 @@
-import pytest
-import allure
-import requests
 import json
-
-from test_data.data import OrderData, Endpoints
+import allure
+import pytest
+import requests
 from jsonschema import validate
+
 from shemas import shemas
+from test_data.data import OrderData, Endpoints
 
 
 @allure.suite("Тестирование API выбора цвета")

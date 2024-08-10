@@ -1,14 +1,14 @@
 import allure
 from selene import browser, have
-from test_data.data import URLs
 from aqa_scooter_rental.locators.ui_locators import OrderLocators, LogoLocators
+from test_data.data import URLs
 
 
 class LogoPage:
 
     @allure.step("Открытие браузера")
     def open_browser(self):
-        browser.open(URLs.MAIN_PAGE_URL)
+        browser.open("/")
         return self
 
     @allure.step("Клик по кнопке Заказать в шапке лендинга")

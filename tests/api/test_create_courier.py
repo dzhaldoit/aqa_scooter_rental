@@ -7,6 +7,7 @@ from test_data.data import *
 from jsonschema import validate
 from shemas import shemas
 
+
 @allure.suite("Тестирование API создание курьера")
 class TestCourierCreate:
 
@@ -55,4 +56,3 @@ class TestCourierCreate:
         assert response.status_code == 400
         assert response.json()["message"] == data.Response.response_no_data_account
         validate(response.json(), shemas.post_insufficient_data)
-

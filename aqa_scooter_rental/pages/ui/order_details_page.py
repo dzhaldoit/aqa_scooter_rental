@@ -1,9 +1,8 @@
 import allure
 from selene import command, be
 from selene.core.query import text_content
-from aqa_scooter_rental.locators.ui_locators import OrderLocators
-from test_data.data import URLs
 from selenium.webdriver.common.keys import Keys
+from aqa_scooter_rental.locators.ui_locators import OrderLocators
 from tests.ui.conftest import browser
 
 
@@ -11,7 +10,7 @@ class OrderPage:
 
     @allure.step("Открытие браузера")
     def open_browser(self):
-        browser.open(URLs.MAIN_PAGE_URL)
+        browser.open("/")
         return self
 
     @allure.step("Клик по кнопке Заказать в шапке лендинга")
