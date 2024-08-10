@@ -41,7 +41,7 @@ def setup_browser(request):
     password = os.getenv("PASSWORD")
     url = os.getenv("SELENOID_URL")
 
-    driver = webdriver.Remote(command_executor=f"https://{login}:{password}@{url}/wd/hub",
+    driver = webdriver.Remote(command_executor=f"https://{login}:{password}@{url}wd/hub",
                               options=options)
 
     browser.config.driver = driver
