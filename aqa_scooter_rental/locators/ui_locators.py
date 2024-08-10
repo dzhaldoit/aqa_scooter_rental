@@ -1,11 +1,9 @@
-
 class FaqLocators:
     QUESTION = ["(.//div[@class='accordion__button'])[{}]"]
     ANSWER = ["(.//div[@class='accordion__panel'])[{}]"]
 
 
 class OrderLocators:
-
     # Кнопка "Заказать"
     ORDER_BUTTON_HEADER = ["//button[text()='Заказать']"]
     ORDER_CENTER_BUTTON = ['(//button[text()="Заказать"])[2]']

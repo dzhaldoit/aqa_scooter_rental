@@ -31,5 +31,3 @@ class QuestionsPage:
 
 
 faq_page = QuestionsPage()
-
-

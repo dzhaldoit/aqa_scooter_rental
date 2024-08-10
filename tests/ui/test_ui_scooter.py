@@ -63,5 +63,3 @@ class TestMainPage:
         assert question_text == question
         # Проверяем, что текст ответа соответствует ожидаемому
         assert answer_text == answer
-
-

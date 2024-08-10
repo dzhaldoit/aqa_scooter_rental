@@ -19,6 +19,3 @@ def couriers_data():
 def currier_data_without_firstname(currier_data):
     currier_data['firstName'] = ''
     return currier_data
-
-
-

@@ -6,7 +6,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from aqa_scooter_rental.utils import attach
 
-
 DEFAULT_BROWSER_VERSION = "125.0"
 
 

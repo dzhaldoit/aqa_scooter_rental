@@ -123,4 +123,3 @@ class OrderPage:
 
 
 order_page = OrderPage()
-

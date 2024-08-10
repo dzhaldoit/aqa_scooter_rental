@@ -1,7 +1,4 @@
-import allure
-import requests
-from selene import browser, be
-
+from selene import browser
 from aqa_scooter_rental.locators.mobile_locators import LogInLocators, ListOrdersLocators
 import data
 from tests.mobile.conftest import static_courier_data
@@ -31,4 +28,3 @@ class MobilePages:
 
 
 mobile_pages = MobilePages()
-
