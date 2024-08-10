@@ -1,5 +1,13 @@
+import json
+
+import allure
 import pytest
-import helpers
+import requests
+from allure_commons._allure import step
+from allure_commons.types import AttachmentType
+
+from aqa_scooter_rental.utils import helpers
+from test_data import data
 
 
 @pytest.fixture
@@ -19,3 +27,9 @@ def couriers_data():
 def currier_data_without_firstname(currier_data):
     currier_data['firstName'] = ''
     return currier_data
+
+
+@pytest.fixture
+def api_url():
+    return 'https://qa-scooter.praktikum-services.ru/'
+

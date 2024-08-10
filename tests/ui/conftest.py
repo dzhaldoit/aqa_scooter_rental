@@ -37,14 +37,17 @@ def setup_browser(request):
         }
     }
     options.capabilities.update(selenoid_capabilities)
-    load_dotenv()
-    login = os.getenv('LOGIN')
-    password = os.getenv('PASSWORD')
-    driver = webdriver.Remote(command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+    login = os.getenv("LOGIN")
+    password = os.getenv("PASSWORD")
+    url = os.getenv("SELENOID_URL")
+
+    driver = webdriver.Remote(command_executor=f"https://{login}:{password}@{url}/wd/hub",
                               options=options)
 
     browser.config.driver = driver
     browser.config.driver_options = options
+
+    browser.config.base_url = 'https://qa-scooter.praktikum-services.ru'
 
     browser.config.timeout = 10.0
     browser.config.window_width = 1920

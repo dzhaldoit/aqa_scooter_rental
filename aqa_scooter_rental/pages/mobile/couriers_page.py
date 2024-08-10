@@ -1,6 +1,6 @@
-from selene import browser
+from selene import browser, be
 from aqa_scooter_rental.locators.mobile_locators import LogInLocators, ListOrdersLocators
-import data
+from test_data import data
 from tests.mobile.conftest import static_courier_data
 
 
@@ -18,12 +18,14 @@ class MobilePages:
         return self
 
     def my_orders(self):
+        browser.element(ListOrdersLocators.MY_BUTTON_ORDER).should(be.visible)
         browser.element(ListOrdersLocators.MY_BUTTON_ORDER).click()
         return self
 
     def logout(self):
         browser.element(ListOrdersLocators.LOG_OUT_BUTTON).click()
         browser.element(ListOrdersLocators.CONFIRM_LOG_OUT).click()
+        browser.element(LogInLocators.LOGIN_BUTTON).should(be.visible)
         return self
 
 

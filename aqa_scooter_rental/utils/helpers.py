@@ -3,8 +3,8 @@ import random
 import string
 import allure
 
-import data
-from data import URLs
+from test_data import data
+from test_data.data import URLs
 
 
 class GenerateString:
@@ -53,7 +53,7 @@ class GenerateDataCourier:
 class GetOrder:
     @allure.step('Получение списка заказов')
     def get_orders_list(body):
-        return requests.get(URLs.creating_order, json=body)
+        return requests.get(data.URLs.MAIN_PAGE_URL + data.Endpoints.creating_order)
 
     @allure.step('Задать параметры списка заказов')
     def set_param_order_list(self):

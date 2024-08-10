@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have
-from data import URLs
+from test_data.data import URLs
 from aqa_scooter_rental.locators.ui_locators import OrderLocators, LogoLocators
 
 

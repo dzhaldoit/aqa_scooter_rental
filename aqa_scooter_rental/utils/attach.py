@@ -50,7 +50,7 @@ def web_html(browser):
 
 
 def web_video(browser):
-    video_url = "https://selenoid.autotests.cloud/video/" + browser.driver.session_id + ".mp4"
+    video_url = f'https://{os.getenv('SELENOID_URL')}/video/' + browser.driver.session_id + ".mp4"
     html = "<html><body><video width='100%' height='100%' controls autoplay><source src='" \
            + video_url \
            + "' type='video/mp4'></video></body></html>"

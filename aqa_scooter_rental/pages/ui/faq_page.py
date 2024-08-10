@@ -1,14 +1,13 @@
 import allure
 from selene import browser, command
 from selene.core.query import text_content
-from data import URLs
 from aqa_scooter_rental.locators.ui_locators import FaqLocators
 
 
 class QuestionsPage:
     @allure.step("Открытие браузера")
     def open_browser(self):
-        browser.open(URLs.MAIN_PAGE_URL)
+        browser.open("/")
         return self
 
     @allure.step("Скролл к вопросам")

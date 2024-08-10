@@ -5,26 +5,15 @@ class URLs:
     MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
     DZEN_URL = 'https://dzen.ru/?yredirect=true'
 
-    # POST Orders - Создание заказа
-    creating_order = f'{MAIN_PAGE_URL}api/v1/orders'
 
-    # GET Orders - Получить заказ по его номеру
-    order_get_number = f'{MAIN_PAGE_URL}api/v1/orders/track?t='
-
-    # PUT Orders - Принять заказ
-    order_accept = f'{MAIN_PAGE_URL}api/v1/orders/accept'
-
-    # GET Orders - Получение списка заказов courierId
-    get_list_orders = f'{MAIN_PAGE_URL}api/v1/orders?courierId='
-
-    # POST Courier - Создание курьера
-    create_courier = f'{MAIN_PAGE_URL}api/v1/courier'
-
-    # POST Courier - Логин курьера в системе
-    login_courier = f'{MAIN_PAGE_URL}api/v1/courier/login'
-
-    # DELETE Courier - Удаление курьера
-    delete_courier = f'{MAIN_PAGE_URL}api/v1/courier/'
+class Endpoints:
+    creating_order = 'api/v1/orders'
+    order_get_number = 'api/v1/orders/track?t='
+    order_accept = 'api/v1/orders/accept'
+    get_list_orders = 'api/v1/orders?courierId='
+    create_courier = 'api/v1/courier'
+    login_courier = 'api/v1/courier/login'
+    delete_courier = 'api/v1/courier/'
 
 
 class OrderData:
@@ -58,13 +47,12 @@ class Response:
 
 class LimitPageOrders:
     limit_page_orders = {
-        "limit": "5",
+        "limit": "1",
         "page": "0"
     }
 
 
 class OrderDataUi:
-    # Данные для заказа самоката
     FIRST_ORDER = {
         'name': 'Михаил',
         'last_name': 'Зубенко',
@@ -91,7 +79,6 @@ class OrderDataUi:
 
 
 class QuestionsAndAnswers:
-    # Блок Вопросы о важном на Главной странице
     QUESTIONS_AND_ANSWERS_LIST = [
         (1, 'Сколько это стоит? И как оплатить?',
          'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'),
