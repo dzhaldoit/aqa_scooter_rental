@@ -1,6 +1,5 @@
 import allure
 import pytest
-from selene import be, have
 
 from test_data.data import QuestionsAndAnswers, OrderDataUi
 from aqa_scooter_rental.pages.ui.faq_page import faq_page
@@ -49,5 +48,5 @@ class TestMainPage:
         question_text = faq_page.get_question(index)
         answer_text = faq_page.get_answers(index)
 
-        question_text.should(be.equal_to(question))
-        answer_text.should(be.equal_to(answer))
+        faq_page.should_text_faq(question_text, question)
+        faq_page.should_question_text_faq(answer_text, answer)
