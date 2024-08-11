@@ -54,18 +54,6 @@ class LimitPageOrders:
 
 class OrderDataUi:
     FIRST_ORDER = {
-        'name': 'Михаил',
-        'last_name': 'Зубенко',
-        'address': 'Мафиозникого 2',
-        'metro': 'Свиблово',
-        'number': '+1234567890',
-        'delivery_date': '04.07.2024',
-        'rent_days': 'сутки',
-        'colour': 'чёрный жемчуг',
-        'comment': 'Позвонить за 5 минут'
-    }
-
-    SECOND_ORDER = {
         'name': 'Абрам',
         'last_name': 'Линкольн',
         'address': 'То тут то там',

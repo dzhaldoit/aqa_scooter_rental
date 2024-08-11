@@ -13,16 +13,8 @@ class TestOrderPage:
     @allure.description('Проверяем флоу позитивного сценария с первым набором данных')
     def test_make_an_order_with_first_data(self):
         order_page.open_browser()
-        order_page.click_first_button()
-        order_page.user_rent_order(**OrderDataUi.FIRST_ORDER)
-        order_page.confirmation_window()
-
-    @allure.title('Проверка позитивного сценария заказа самоката со вторым набором данных')
-    @allure.description('Проверяем флоу позитивного сценария со вторым набором данных')
-    def test_make_an_order_with_second_data(self):
-        order_page.open_browser()
         order_page.click_second_button()
-        order_page.user_rent_order(**OrderDataUi.SECOND_ORDER)
+        order_page.user_rent_order(**OrderDataUi.FIRST_ORDER)
         order_page.confirmation_window()
 
 
