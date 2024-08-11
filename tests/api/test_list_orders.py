@@ -1,7 +1,8 @@
 import allure
+from jsonschema import validate
 
 from aqa_scooter_rental.utils import helpers
-from jsonschema import validate
+from aqa_scooter_rental.utils.attach import response_logging, response_attaching
 from shemas import shemas
 
 
@@ -12,6 +13,8 @@ class TestListOrder:
         get_order_instance = helpers.GetOrder()
         body = get_order_instance.set_param_order_list()
         response = helpers.GetOrder.get_orders_list(body)
+        response_logging(response)
+        response_attaching(response)
 
         assert 200 == response.status_code
         assert type(response.json()["orders"]) == list

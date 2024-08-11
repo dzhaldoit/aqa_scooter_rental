@@ -1,10 +1,9 @@
-import requests
 import random
 import string
 import allure
+import requests
 
 from test_data import data
-from test_data.data import URLs
 
 
 class GenerateString:

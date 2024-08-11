@@ -6,7 +6,7 @@ from jsonschema import validate
 
 from shemas import shemas
 from test_data.data import OrderData, Endpoints
-
+from aqa_scooter_rental.utils.attach import response_logging, response_attaching
 
 @allure.suite("Тестирование API выбора цвета")
 class TestCreateOrder:
@@ -17,6 +17,8 @@ class TestCreateOrder:
         payload['color'] = color
         payload = json.dumps(OrderData.order_data)
         response = requests.post(api_url + Endpoints.creating_order, data=payload)
+        response_logging(response)
+        response_attaching(response)
 
         assert response.status_code == 201
         assert 'track' in response.json().keys()
