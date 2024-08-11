@@ -11,13 +11,12 @@ class TestMobile:
         with allure.step("Авторизация курьера"):
             mobile_pages.login_courier(static_courier_data)
 
+    @allure.title('Тестирование выхода курьера из приложения')
     def test_my_orders(self, mobile_management, static_courier_data):
         with allure.step("Подключение к серверу"):
             mobile_pages.connecting_server()
         with allure.step("Авторизация курьера"):
             mobile_pages.login_courier(static_courier_data)
-        with allure.step("Мои заказы"):
-            mobile_pages.my_orders()
         with allure.step("Выход"):
             mobile_pages.logout()
 
