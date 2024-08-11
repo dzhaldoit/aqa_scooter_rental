@@ -9,14 +9,20 @@ from aqa_scooter_rental.pages.ui.logo_page import logo_page
 
 @allure.suite('Позитивный сценарий')
 class TestOrderPage:
-    @allure.title('Проверка позитивного сценария заказа самоката')
-    @allure.description('Проверяем весь флоу позитивного сценария с двумя наборами данных')
-    @pytest.mark.parametrize('button_method, data_order', [('click_first_button', OrderDataUi.FIRST_ORDER),
-                                                           ('click_second_button', OrderDataUi.SECOND_ORDER)])
-    def test_make_an_order(self, data_order, button_method):
+    @allure.title('Проверка позитивного сценария заказа самоката с первым набором данных')
+    @allure.description('Проверяем флоу позитивного сценария с первым набором данных')
+    def test_make_an_order_with_first_data(self):
         order_page.open_browser()
-        getattr(order_page, button_method)()
-        order_page.user_rent_order(**data_order)
+        order_page.click_first_button()
+        order_page.user_rent_order(**OrderDataUi.FIRST_ORDER)
+        order_page.confirmation_window()
+
+    @allure.title('Проверка позитивного сценария заказа самоката со вторым набором данных')
+    @allure.description('Проверяем флоу позитивного сценария со вторым набором данных')
+    def test_make_an_order_with_second_data(self):
+        order_page.open_browser()
+        order_page.click_second_button()
+        order_page.user_rent_order(**OrderDataUi.SECOND_ORDER)
         order_page.confirmation_window()
 
 
