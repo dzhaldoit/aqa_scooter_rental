@@ -69,7 +69,7 @@ class OrderDataUi:
         'name': 'Абрам',
         'last_name': 'Линкольн',
         'address': 'То тут то там',
-        'metro': 'Крылатское',
+        'metro': 'Свиблово',
         'number': '+3424123123',
         'delivery_date': '01.07.2024',
         'rent_days': 'двое суток',

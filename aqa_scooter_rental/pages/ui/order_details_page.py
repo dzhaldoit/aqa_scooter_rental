@@ -44,8 +44,7 @@ class OrderPage:
 
     @allure.step("Заполнение поля Метро")
     def metro(self, metro):
-        browser.element(*OrderLocators.METRO).should(be.visible)
-        browser.element(*OrderLocators.METRO).type(metro)
+        browser.element(*OrderLocators.METRO).should(be.visible).type(metro)
         browser.element(*OrderLocators.METRO).clear()
         browser.element(*OrderLocators.METRO).type(metro)
         browser.element(*OrderLocators.LIST_STATION).should(be.clickable).click()
