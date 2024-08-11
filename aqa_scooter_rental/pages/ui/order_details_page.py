@@ -39,7 +39,7 @@ class OrderPage:
 
     @allure.step("Заполнение поля Адрес")
     def user_address(self, address):
-        browser.element(*OrderLocators.ADDRESS).send_keys(address)
+        browser.element(*OrderLocators.ADDRESS).type(address)
         return self
 
     @allure.step("Заполнение поля Метро")
