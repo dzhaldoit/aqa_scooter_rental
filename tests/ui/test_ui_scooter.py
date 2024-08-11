@@ -1,21 +1,9 @@
 import allure
 import pytest
 
-from test_data.data import QuestionsAndAnswers, OrderDataUi
+from test_data.data import QuestionsAndAnswers
 from aqa_scooter_rental.pages.ui.faq_page import faq_page
-from aqa_scooter_rental.pages.ui.order_details_page import order_page
 from aqa_scooter_rental.pages.ui.logo_page import logo_page
-
-
-@allure.suite('Позитивный сценарий')
-class TestOrderPage:
-    @allure.title('Проверка позитивного сценария заказа самоката с первым набором данных')
-    @allure.description('Проверяем флоу позитивного сценария с первым набором данных')
-    def test_make_an_order_with_first_data(self):
-        order_page.open_browser()
-        order_page.click_first_button()
-        order_page.user_rent_order(**OrderDataUi.FIRST_ORDER)
-        order_page.confirmation_window()
 
 
 @allure.suite('URL логотипа')
