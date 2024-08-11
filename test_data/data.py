@@ -52,20 +52,6 @@ class LimitPageOrders:
     }
 
 
-class OrderDataUi:
-    FIRST_ORDER = {
-        'name': 'Абрам',
-        'last_name': 'Линкольн',
-        'address': 'То тут то там',
-        'metro': 'Бульвар Рокоссовского',
-        'number': '+3424123123',
-        'delivery_date': '01.07.2024',
-        'rent_days': 'двое суток',
-        'colour': 'серая безысходность',
-        'comment': 'Не звонить!'
-    }
-
-
 class QuestionsAndAnswers:
     QUESTIONS_AND_ANSWERS_LIST = [
         (1, 'Сколько это стоит? И как оплатить?',
