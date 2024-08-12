@@ -63,8 +63,16 @@ git clone https://github.com/dzhaldoit/aqa_scooter_rental.git
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-pytest tests --context==bstack
+pytest tests
 ```
+###### В консоле иожно изменить параметры запуска, запуск тестов зависит от написание наименований папки для запуска.
+```
+tests\api    - Запуск только API тестов.
+tests\ui     - Запуск только UI тестов.
+tests\mobile - Запуск только MOBILE тестов.
+tests        - Запуск API/UI/MOBILE тестов.
+```
+
 
 ----
 ### <img title="Jenkins" src="resources/icons/jenkins.svg" height="40" width="40"/> Удаленный запуск автотестов выполняется на сервере Jenkins
