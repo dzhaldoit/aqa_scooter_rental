@@ -2,7 +2,7 @@ import allure
 import requests
 from jsonschema import validate
 
-from aqa_scooter_rental.utils import helpers
+
 from aqa_scooter_rental.utils.attach import response_logging, response_attaching
 from shemas import shema
 from test_data import data
