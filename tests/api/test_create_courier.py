@@ -3,10 +3,10 @@ import pytest
 import requests
 from jsonschema import validate
 
-from shemas import shemas
+from aqa_scooter_rental.utils.attach import response_logging, response_attaching
+from shemas import shema
 from test_data import data
 from test_data.data import *
-from aqa_scooter_rental.utils.attach import response_logging, response_attaching
 
 
 @allure.suite("Тестирование API создание курьера")
@@ -21,7 +21,7 @@ class TestCourierCreate:
 
         assert response.status_code == 201
         assert response.text == Response.response_registration_successful
-        validate(response.json(), shemas.post_create)
+        validate(response.json(), shema.post_create)
 
     @allure.title("Тестирование успешного создания курьера, "
                   "при передаче только обязательных полей(логин,пароль)")
@@ -32,7 +32,7 @@ class TestCourierCreate:
 
         assert response.status_code == 201
         assert response.text == Response.response_registration_successful
-        validate(response.json(), shemas.post_create)
+        validate(response.json(), shema.post_create)
 
     @allure.title("Тестирование, что нельзя создать двух одинаковых курьеров")
     def test_not_create_double_courier(self, currier_data, api_url):
@@ -43,7 +43,7 @@ class TestCourierCreate:
 
         assert response.status_code == 409
         assert response.json()["message"] == Response.response_login_used
-        validate(response.json(), shemas.post_is_used)
+        validate(response.json(), shema.post_is_used)
 
     @allure.title("Тестирование, что нельзя создать двух курьеров с одинаковым логином")
     def test_not_create_double_login_courier(self, couriers_data, api_url):
@@ -54,7 +54,7 @@ class TestCourierCreate:
 
         assert response.status_code == 409
         assert response.json()["message"] == Response.response_login_used
-        validate(response.json(), shemas.post_is_used)
+        validate(response.json(), shema.post_is_used)
 
     @allure.title('Тестирование, что если нет логина или пароля, запрос вернет ошибку')
     @pytest.mark.parametrize('key, value', [('login', ''), ('password', '')])
@@ -66,4 +66,4 @@ class TestCourierCreate:
 
         assert response.status_code == 400
         assert response.json()["message"] == data.Response.response_no_data_account
-        validate(response.json(), shemas.post_insufficient_data)
+        validate(response.json(), shema.post_insufficient_data)

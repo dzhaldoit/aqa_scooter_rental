@@ -1,12 +1,14 @@
 import json
+
 import allure
 import pytest
 import requests
 from jsonschema import validate
 
-from shemas import shemas
-from test_data.data import OrderData, Endpoints
 from aqa_scooter_rental.utils.attach import response_logging, response_attaching
+from shemas import shema
+from test_data.data import OrderData, Endpoints
+
 
 @allure.suite("Тестирование API выбора цвета")
 class TestCreateOrder:
@@ -22,4 +24,4 @@ class TestCreateOrder:
 
         assert response.status_code == 201
         assert 'track' in response.json().keys()
-        validate(response.json(), shemas.post_choose_color)
+        validate(response.json(), shema.post_choose_color)

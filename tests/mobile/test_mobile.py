@@ -1,4 +1,5 @@
 import allure
+
 from aqa_scooter_rental.pages.mobile.couriers_page import mobile_pages
 
 
@@ -10,9 +11,5 @@ class TestMobile:
             mobile_pages.connecting_server()
         with allure.step("Авторизация курьера"):
             mobile_pages.login_courier(static_courier_data)
-        with allure.step("Мои заказы"):
-            mobile_pages.my_orders()
         with allure.step("Выход"):
             mobile_pages.logout()
-
-

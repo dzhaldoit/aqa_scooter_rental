@@ -48,8 +48,6 @@ requirements.txt    - Файл с требованиями к проекту
     - :white_check_mark: Тестирование API авторизации курьера
 * Mobile Тесты
     - :white_check_mark: Проверка входа в аккаунт
-    - :white_check_mark: Проверка заказов
-    - :white_check_mark: Выход из аккаунта
 
 ----
 ### <img title="Jenkins" src="https://e7.pngegg.com/pngimages/578/441/png-clipart-computer-icons-intranet-computer-network-technical-support-network-computer-network-text.png" height="40" width="40"/> Локальный запуск
@@ -82,7 +80,7 @@ tests        - Запуск API/UI/MOBILE тестов.
 * `TESTS_TYPE`  - Выбор теста api/ui/mobile сборки
 * `CONTEXT`     - Выбор где будет тест на mobile bstack/emulator/real
 * `comment`     - Комментарий
-* `ENVIRONMENT` - Выбор для кого идет запуск теста
+* `ENVIRONMENT` - Выбор среды запуска теста
 
 
 ####  Для запуска автотестов в Jenkins

@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have
-from aqa_scooter_rental.locators.ui_locators import OrderLocators, LogoLocators
+
 from test_data.data import URLs
 
 
@@ -13,17 +13,17 @@ class LogoPage:
 
     @allure.step("Клик по кнопке Заказать в шапке лендинга")
     def click_order_button(self):
-        browser.element(*OrderLocators.ORDER_BUTTON_HEADER).click()
+        browser.element(".Button_Button__ra12g").click()
         return self
 
     @allure.step("Клик по лого 'Самокат'")
     def click_scooter_button(self):
-        browser.element(*LogoLocators.SCOOTER_BUTTON).click()
+        browser.element(".Header_LogoScooter__3lsAR").click()
         return self
 
     @allure.step("Клик по лого 'Дзен'")
     def click_dzen_button(self):
-        browser.element(*LogoLocators.YANDEX_BUTTON).click()
+        browser.element(".Header_LogoYandex__3TSOI").click()
         return self
 
     @allure.step("Переключение вкладки")
