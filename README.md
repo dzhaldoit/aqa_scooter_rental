@@ -73,19 +73,21 @@ tests        - Запуск API/UI/MOBILE тестов.
 <br>
 </details>
 
-###### ⚠️Важно для запуска Mobile
-
+#### ⚠️Важно для запуска Mobile
+```
 tests\mobile - Запуск только MOBILE тестов.
 tests        - Запуск API/UI/MOBILE тестов.
 
-При выборе этих параметров запуска нужно выбрать среду запуска теста:<br>
+При выборе этих параметров запуска нужно выбрать среду запуска теста:
 
---context=bstack          - Значение по умолчанию запустится на browserstack<br>
---context=local_emulator  - Эмулятор <br> 
---context=local_real      - Реуальное устройство<br>
+--context=bstack          - Значение по умолчанию запустится на browserstack
+--context=local_emulator  - Эмулятор
+--context=local_real      - Реуальное устройство
 
-Пример:<br>
+Пример:
+
 pytest tests\mobile --context=local_emulator - Запустится тесты среды Эмулятора
+```
 
 
 
