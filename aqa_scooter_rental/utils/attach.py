@@ -27,7 +27,7 @@ def bstack_video():
     )
 
 
-def bstack_page_source_xml():
+def mobile_xml():
     allure.attach(
         browser.driver.page_source,
         name='page_source_xml',
@@ -35,7 +35,7 @@ def bstack_page_source_xml():
     )
 
 
-def bstack_screenshot():
+def mobile_screenshot():
     allure.attach(
         browser.driver.get_screenshot_as_png(),
         name='screenshot',
