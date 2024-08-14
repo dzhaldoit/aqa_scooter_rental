@@ -63,26 +63,30 @@ source .venv/bin/activate
 pip install -r requirements.txt
 pytest tests
 ```
-###### В консоле можно изменить параметры запуска, запуск тестов зависит от написания наименований папки для запуска.
-```
-tests\api    - Запуск только API тестов.
-tests\ui     - Запуск только UI тестов.
-tests\mobile - Запуск только MOBILE тестов.
+<details>
+<summary>В консоле можно изменить параметры запуска, запуск тестов зависит от написания наименований папки для запуска.</summary>
+
+tests\api - Запуск только API тестов.<br>
+tests\ui - Запуск только UI тестов.<br>
+tests\mobil - Запуск только MOBILE тестов.<br>
 tests        - Запуск API/UI/MOBILE тестов.
-```
-###### Важно для запуска Mobile
-```
+<br>
+</details>
+
+###### ⚠️Важно для запуска Mobile
+
 tests\mobile - Запуск только MOBILE тестов.
 tests        - Запуск API/UI/MOBILE тестов.
 
-При выборе этих параметров запуска нужно выбрать среду запуска теста:
---context=bstack          - Значение по умолчанию запустится на browserstack
---context=local_emulator  - Эмулятор
---context=local_real      - Реуальное устройство
+При выборе этих параметров запуска нужно выбрать среду запуска теста:<br>
 
-Пример:
+--context=bstack          - Значение по умолчанию запустится на browserstack<br>
+--context=local_emulator  - Эмулятор <br> 
+--context=local_real      - Реуальное устройство<br>
+
+Пример:<br>
 pytest tests\mobile --context=local_emulator - Запустится тесты среды Эмулятора
-```
+
 
 
 ----
